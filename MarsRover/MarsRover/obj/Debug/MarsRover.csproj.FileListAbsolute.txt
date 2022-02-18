@@ -1,6 +1,0 @@
-D:\MarsRover\MarsRover\bin\Debug\MarsRover.exe.config
-D:\MarsRover\MarsRover\obj\Debug\MarsRover.csprojResolveAssemblyReference.cache
-D:\MarsRover\MarsRover\bin\Debug\MarsRover.exe
-D:\MarsRover\MarsRover\bin\Debug\MarsRover.pdb
-D:\MarsRover\MarsRover\obj\Debug\MarsRover.exe
-D:\MarsRover\MarsRover\obj\Debug\MarsRover.pdb
