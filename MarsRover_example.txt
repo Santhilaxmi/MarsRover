@@ -1,0 +1,6 @@
+Sample Input Format:
+Grid Size: 5*5
+Robot Command: FFRFLFLF
+
+Expected Output:
+1, 4, West
