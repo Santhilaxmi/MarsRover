@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,18 +18,35 @@ namespace MarsRover
          static void Main(string[] args)
         {
 
-            Console.WriteLine("Grid Size: ");
-            string grid = Console.ReadLine();  // Input Grid Size
-            Console.WriteLine("Robot Command: ");
-            string cmd_str = Console.ReadLine();    // Robot Command
-            char[] spearator = { '*', ' ' };
-            string[] str = grid.Split(spearator);
+            bool isValid = false;
+            while (!isValid) // Check the input is valid or not
+            {
+                Console.WriteLine("Grid Size: ");
+                string grid = Console.ReadLine();  // Input Grid Size            
+                char[] spearator = { '*', ' ' };
+                string[] str = grid.Split(spearator);
 
-            row_max = Int32.Parse(str[0]);    //Maximum Rows
-            col_max = Int32.Parse(str[1]);    //Maximum Columns
+                row_max = Int32.Parse(str[0]);    //Maximum Rows
+                col_max = Int32.Parse(str[1]);    //Maximum Columns    
 
-            dir = "N"; // Initial Robot direction
-            Move(cmd_str); // Call the Move function with Robot Command
+                // checking the gridsize is greater than zero
+                if (row_max <= 0 || col_max <= 0)
+                {
+                    Console.WriteLine("Grid size must be greater than zero");
+                    grid = Console.ReadLine();
+                }
+                else
+                {
+                    isValid = true;
+                }
+            }
+            // We leave the while loop here once validInput == true
+                Console.WriteLine("Robot Command: ");
+                string cmd_str = Console.ReadLine();    // Robot Command
+
+                dir = "N"; // Initial Robot direction
+                Move(cmd_str); // Call the Move function with Robot Command
+            
         }
 
          public static void Move(string strMessages)
